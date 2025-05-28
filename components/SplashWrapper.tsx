@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Splash from './Splash'
 
 function SplashWrapper({children}: {children: React.ReactNode}) {
+  let hasShown = localStorage.getItem('splashShown');
 
     const [showSplash, setShowSplash] = useState(true);
 
@@ -14,9 +15,20 @@ function SplashWrapper({children}: {children: React.ReactNode}) {
         return () => clearTimeout(timer);
     }, []);
 
-  return (
-    showSplash? <Splash onFinish={() => setShowSplash(false)} /> : <>{children}</>
-  )
+    if(hasShown && !showSplash){
+      return <>{children}</>
+  }else{
+     localStorage.setItem('splashShown', 'true')
+     return <Splash onFinish={() => setShowSplash(false)} /> 
+  }
+  // return (
+  //   {if(hasShown && !showSplash)?(<>{children}</>):
+  //   }
+  //   }
+  //   showSplash? <Splash onFinish={() => setShowSplash(false)} /> : <>{children}</>
+  // )
 }
+
+
 
 export default SplashWrapper

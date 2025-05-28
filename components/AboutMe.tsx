@@ -1,3 +1,4 @@
+import { Github } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 
@@ -32,6 +33,11 @@ function AboutMe() {
               You can check some of my projects in my github profile , however some projects are not completed or outdated ,due to my conditions as a refugee
               sometimes I didnt have the chance to complete a project . also in some projects I have used some technologies that was on free trial period ,and now that the trial has expierd some feature might not work , but checking the codes would show my skills in coding.
             </p>
+
+              <div className='text-gray-500  flex div-5 text-justify space-x-3 max-w-prose text-sm'>
+                <div>you can check some of my codes in my github </div>
+                <a href='https://github.com/somy-bit' target='_blank' className='hover:no-underline hover:opacity-80 flex space-x-2 items-center'><span>My Github</span><Github size={20} color='blue' /></a>
+              </div>
           </div>
 
           <div className='hidden md:flex'>

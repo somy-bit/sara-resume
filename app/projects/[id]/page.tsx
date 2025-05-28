@@ -1,17 +1,11 @@
 import { Props } from '@/components/Main';
 import Project from '@/components/Project'
+import Slider from '@/components/Slider';
 import { ChevronLeft } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
-import { div } from 'framer-motion/client';
+
 
 
 
@@ -59,6 +53,7 @@ const projects: Props[] = [
 
 async function page({ params }: { params: Promise<{ id: number }> }) {
 
+  
 
   const { id } = await params;
   console.log('id in page', id)
@@ -72,7 +67,8 @@ async function page({ params }: { params: Promise<{ id: number }> }) {
         </Link>
       </div>
       <div className='h-46 w-full overflow-hidden'>
-        <Carousel>
+        <Slider imgs={project?.image}/>
+        {/* <Carousel>
           <CarouselContent>
             {project?.image.map((img, index) => (
               <CarouselItem key={index}>
@@ -88,12 +84,12 @@ async function page({ params }: { params: Promise<{ id: number }> }) {
           </CarouselContent>
           <CarouselPrevious />
           <CarouselNext />
-        </Carousel>
+        </Carousel> */}
 
 <div className='flex justify-end px-6 py-2'>
-  <Link href={project?.url} className='text-blue-500 text-sm font-semibold hover:underline'>
+  <a target='_blank' href={project?.url}  className='text-blue-500 text-sm font-semibold hover:underline'>
    click here to View Project
-  </Link>
+  </a>
 </div>
 
       </div>
