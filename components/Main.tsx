@@ -4,7 +4,6 @@ import Skills from './Skills'
 import Experiance from './Experiance'
 import Education from './Education'
 import Image from 'next/image'
-import Link from 'next/link'
 import Project from './Project'
 
 export type Props={
@@ -48,11 +47,11 @@ const projects : Props[]= [
 
 function Main() {
   return (
-    <div className='flex flex-col space-y-6 scrollbar-hide overflow-auto w-full text-gray-900 text-sm bg-[#f6f6f6] pb-24  lg:max-w-6xl mx-auto py-5 px-4'>
-      <div className='flex flex-row space-x-3 items-center '>
+    <div className='flex flex-col space-y-6 scrollbar-hide overflow-y-auto w-screen text-gray-900 text-sm bg-[#f6f6f6] pb-24  lg:max-w-6xl mx-auto py-5 px-4'>
+     
         <AboutMe />
     
-      </div>
+     
 
       <div className='w-full py-3  bg-gray-400/50'><p className='font-bold text-center text-black text-xl'>Skills</p></div>
       <div className='md:flex md:space-x-3 md:items-center'> 

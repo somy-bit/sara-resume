@@ -33,7 +33,7 @@ export default function RootLayout({
   
   return (
     <html lang="en">
-      <body >
+      <body className="box-border  max-w-screen">
         <SplashWrapper children={children} />
       </body>
     </html>

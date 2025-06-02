@@ -4,7 +4,7 @@ import React from 'react'
 
 function AboutMe() {
   return (
-    <div className='md:shadow-md md:mt-10 flex-none md:bg-white mx-auto  self-start   pt-8 pb-6 rounded-md'>
+    <div className='md:shadow-md md:mt-10 flex md:flex-row md:spase-x-3 md:bg-white mx-auto  self-start   pt-8 pb-6 rounded-md'>
 
       <div >
         <h1 className='text-gray-800 pl-5  text-lg'>A Short Summery Of Who I Am</h1>
